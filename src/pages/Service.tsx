@@ -29,7 +29,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, heroImage, description
     },
   };
 
-  const itemVariants = { 
+  const itemVariants: unknown = { 
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,

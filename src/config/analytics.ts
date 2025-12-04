@@ -1,19 +1,6 @@
 import { logEvent, setUserProperties, setUserId } from 'firebase/analytics';
 import { analytics } from './firebase';
 
-// Extend Window interface for analytics scripts
-declare global {
-  interface Window {
-    gtag?: (
-      command: 'config' | 'event' | 'set',
-      targetId: string,
-      config?: Record<string, unknown>
-    ) => void;
-    clarity?: (command: string, ...args: unknown[]) => void;
-    dataLayer?: unknown[];
-  }
-}
-
 // Analytics event types
 export type EventCategory = 
   | 'Contact' 
@@ -34,6 +21,19 @@ export interface PageViewData {
   page_path: string;
   page_title?: string;
   page_location?: string;
+}
+
+// Extend Window interface for analytics scripts
+declare global {
+  interface Window {
+    gtag?: (
+      command: 'config' | 'event' | 'set',
+      targetId: string,
+      config?: Record<string, any>
+    ) => void;
+    clarity?: (command: string, ...args: any[]) => void;
+    dataLayer?: any[];
+  }
 }
 
 // Check if analytics is available
@@ -70,7 +70,7 @@ export const trackPageView = (path: string, title?: string): void => {
         page_location: window.location.href
       };
 
-      window.gtag('config', measurementId, pageViewData as unknown as Record<string, unknown>);
+      window.gtag('config', measurementId, pageViewData as Record<string, any>);
       console.log(' Page view tracked:', path);
     }
 
@@ -101,7 +101,7 @@ export const trackEvent = (
         event_category: category,
         event_label: label,
         value: value,
-      });
+      } as Record<string, any>);
       console.log(' Event tracked:', { action, category, label, value });
     }
 
@@ -159,7 +159,7 @@ export const setUserProperty = (propertyName: string, value: string): void => {
     if (isAnalyticsAvailable() && window.gtag) {
       window.gtag('set', 'user_properties', {
         [propertyName]: value
-      });
+      } as Record<string, any>);
     }
 
     // Also set with Firebase Analytics if available
@@ -227,7 +227,7 @@ export const setClarityTag = (key: string, value: string): void => {
 export const identifyClarityUser = (userId: string, sessionId?: string, pageId?: string): void => {
   try {
     if (isClarityAvailable() && window.clarity) {
-      window.clarity('identify', userId, { sessionId, pageId } as Record<string, any>);
+      window.clarity('identify', userId, { sessionId, pageId });
       console.log(' Clarity user identified:', userId);
     }
   } catch (error) {
