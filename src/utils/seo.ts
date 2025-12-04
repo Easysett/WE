@@ -128,7 +128,7 @@ export const updateMetaTags = ({
 /**
  * Generate and inject structured data (JSON-LD)
  */
-const injectStructuredData = (id: string, data: Record<string, any>): void => {
+const injectStructuredData = (id: string, data: Record<string, unknown>): void => {
   try {
     // Remove existing script with same ID
     const existingScript = document.getElementById(id);

@@ -7,10 +7,10 @@ declare global {
     gtag?: (
       command: 'config' | 'event' | 'set',
       targetId: string,
-      config?: Record<string, any>
+      config?: Record<string, unknown>
     ) => void;
-    clarity?: (command: string, ...args: any[]) => void;
-    dataLayer?: any[];
+    clarity?: (command: string, ...args: unknown[]) => void;
+    dataLayer?: unknown[];
   }
 }
 
@@ -70,7 +70,7 @@ export const trackPageView = (path: string, title?: string): void => {
         page_location: window.location.href
       };
 
-      window.gtag('config', measurementId, pageViewData);
+      window.gtag('config', measurementId, pageViewData as unknown as Record<string, unknown>);
       console.log(' Page view tracked:', path);
     }
 
@@ -227,7 +227,7 @@ export const setClarityTag = (key: string, value: string): void => {
 export const identifyClarityUser = (userId: string, sessionId?: string, pageId?: string): void => {
   try {
     if (isClarityAvailable() && window.clarity) {
-      window.clarity('identify', userId, sessionId, pageId);
+      window.clarity('identify', userId, { sessionId, pageId } as Record<string, any>);
       console.log(' Clarity user identified:', userId);
     }
   } catch (error) {
@@ -288,18 +288,24 @@ export const initializeAnalytics = (consentGiven: boolean): void => {
   if (consentGiven) {
     console.log(' Analytics consent given - tracking enabled');
     // Enable analytics tracking
-    if (isAnalyticsAvailable() && window.gtag) {
-      window.gtag('consent', 'update', {
-        analytics_storage: 'granted'
+    if (typeof window !== 'undefined' && window.gtag) {
+      // Use dataLayer for consent updates as gtag('consent') is not directly typed
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'consent': 'update',
+        'analytics_storage': 'granted'
       });
+      console.log(' Google Analytics consent updated to granted');
     }
   } else {
     console.log(' Analytics consent denied - tracking disabled');
-    // Disable analytics tracking
-    if (isAnalyticsAvailable() && window.gtag) {
-      window.gtag('consent', 'update', {
-        analytics_storage: 'denied'
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'consent': 'update',
+        'analytics_storage': 'denied'
       });
+      console.log(' Google Analytics consent updated to denied');
     }
   }
 };

@@ -61,14 +61,6 @@ const HeroSection: React.FC = () => {
     return () => clearInterval(interval);
   }, [isAutoPlaying]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };

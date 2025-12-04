@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Check, Target, Award, Users } from 'lucide-react';
 import CTASection from '../components/CTASection';
 import WhyChooseUs from '../components/WhyChooseUs';

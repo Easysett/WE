@@ -109,7 +109,7 @@ const Sitemap: React.FC = () => {
                 <div className="bg-gray-50 p-6">
                   <h4 className="font-semibold text-gray-700 mb-4">Services Included:</h4>
                   <div className="grid md:grid-cols-2 gap-3">
-                    {page.children.map((child, childIndex) => (
+                    {page.children.map((child) => (
                       <Link // childIndex is not used here, so it can be removed
                         key={child.path}
                         to={child.path}
