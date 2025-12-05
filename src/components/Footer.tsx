@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'About Us', path: '/about' },
-                { name: 'Services', path: '/services' },
+                { name: 'Services', path: '/services/business-setup' },
                 { name: 'Blog', path: '/blog' },
                 { name: 'Contact', path: '/contact' }
               ].map((link, index) => (
@@ -101,19 +101,22 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-3">
               {[
-                'Business Setup',
-                'Visa Services',
-                'Golden Visa',
-                'Family Visa',
-                'Document Attestation',
-                'Translation Services',
-                'Amer Services',
-                'PRO Services'
+                { name: 'Business Setup', path: '/services/business-setup' },
+                { name: 'Visa Services', path: '/services/visa-services' },
+                { name: 'Golden Visa', path: '/services/golden-visa' },
+                { name: 'Family Visa', path: '/services/family-visa' },
+                { name: 'Document Attestation', path: '/services/document-attestation' },
+                { name: 'Translation Services', path: '/services/translation-services' },
+                { name: 'Amer Services', path: '/services/amer-services' },
+                { name: 'PRO Services', path: '/services/pro-services' }
               ].map((service, index) => (
                 <li key={index}>
                   <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 hover:translate-x-1 group cursor-pointer">
-                    <ChevronRight size={16} className="text-green-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <span>{service}</span>
+
+                    <Link to={service.path} className="flex items-center gap-2 text-gray-300 hover:text-white transition-all duration-300 hover:translate-x-1 group">
+                      <ChevronRight size={16} className="text-green-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <span>{service.name}</span>
+                    </Link>
                   </div>
                 </li>
               ))}

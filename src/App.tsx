@@ -11,16 +11,18 @@ import NotFound from './pages/NotFound';
 import { servicesData } from './data/servicesData';
 import { trackPageView } from './config/analytics';
 import Sitemap from './pages/Sitemap';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   const location = useLocation();
-
+  
   useEffect(() => {
     trackPageView(location.pathname + location.search);
   }, [location]);
-
+  
   return (
     <div className="min-h-screen flex flex-col">
+      <ScrollToTop />
       <Header />
       <main className="flex-grow">
         <Routes>
