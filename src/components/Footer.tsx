@@ -26,9 +26,10 @@ const Footer: React.FC = () => {
               />
             </Link>
             {/* Social Icons */}
-            <div className="flex gap-3 mt-6">
-              <a 
-                href="#" 
+            <div className="flex gap-3 mt-6 ">
+              <a target='_blank'
+                rel="noopener"
+                href="https://www.facebook.com/share/1C1i27yzck/?mibextid=wwXIfr" 
                 aria-label="Facebook"
                 className="bg-gray-800 hover:bg-blue-600 p-3 rounded-lg transition-all duration-300 transform hover:scale-110"
               >

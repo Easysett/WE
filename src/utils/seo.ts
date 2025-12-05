@@ -49,13 +49,10 @@ export const updateMetaTags = ({
   modifiedTime
 }: MetaTags): void => {
   try {
-    // Update page title
     document.title = title;
-
-    // Helper function to update or create meta tag
     const updateMetaTag = (
       selector: string,
-      attribute: string,
+      _attribute: string,
       content: string
     ): void => {
       let element = document.querySelector(selector);

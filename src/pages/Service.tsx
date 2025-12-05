@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import CTASection from '../components/CTASection';
 import { CheckCircle2} from 'lucide-react';
 import WhyChooseUs from '../components/WhyChooseUs';
@@ -18,7 +18,7 @@ interface ServicePageProps {
 
 
 const ServicePage: React.FC<ServicePageProps> = ({ title, heroImage, description, features }) => {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -29,7 +29,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, heroImage, description
     },
   };
 
-  const itemVariants: unknown = { 
+  const itemVariants: Variants = { 
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,

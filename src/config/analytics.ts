@@ -1,7 +1,19 @@
 import { logEvent, setUserProperties, setUserId } from 'firebase/analytics';
 import { analytics } from './firebase';
 
-// Analytics event types
+
+declare global {
+  interface Window {
+    gtag?: (
+      command: 'config' | 'event' | 'set',
+      targetId: string,
+      config?: Record<string, unknown>
+    ) => void;
+    clarity?: (command: string, ...args: unknown[]) => void;
+    dataLayer?: unknown[];
+  }
+}
+
 export type EventCategory = 
   | 'Contact' 
   | 'Navigation' 
@@ -23,20 +35,7 @@ export interface PageViewData {
   page_location?: string;
 }
 
-// Extend Window interface for analytics scripts
-declare global {
-  interface Window {
-    gtag?: (
-      command: 'config' | 'event' | 'set',
-      targetId: string,
-      config?: Record<string, any>
-    ) => void;
-    clarity?: (command: string, ...args: any[]) => void;
-    dataLayer?: any[];
-  }
-}
 
-// Check if analytics is available
 const isAnalyticsAvailable = (): boolean => {
   return typeof window !== 'undefined' && window.gtag !== undefined;
 };
@@ -49,11 +48,6 @@ const isFirebaseAnalyticsAvailable = (): boolean => {
   return analytics !== null;
 };
 
-// Google Analytics Functions
-
-/**
- * Track page view with Google Analytics
- */
 export const trackPageView = (path: string, title?: string): void => {
   try {
     const measurementId = import.meta.env.VITE_GA_MEASUREMENT_ID;
@@ -64,17 +58,15 @@ export const trackPageView = (path: string, title?: string): void => {
     }
 
     if (isAnalyticsAvailable() && window.gtag) {
-      const pageViewData: PageViewData = {
+      const pageViewData: Record<string, unknown> = {
         page_path: path,
         page_title: title || document.title,
         page_location: window.location.href
       };
 
-      window.gtag('config', measurementId, pageViewData as Record<string, any>);
-      console.log(' Page view tracked:', path);
+      window.gtag('config', measurementId, pageViewData);
+      console.log('📊 Page view tracked:', path);
     }
-
-    // Also track with Firebase Analytics if available
     if (isFirebaseAnalyticsAvailable() && analytics) {
       logEvent(analytics, 'page_view', {
         page_path: path,
@@ -85,10 +77,6 @@ export const trackPageView = (path: string, title?: string): void => {
     console.error('Error tracking page view:', error);
   }
 };
-
-/**
- * Track custom event with Google Analytics
- */
 export const trackEvent = (
   action: string,
   category: EventCategory,
@@ -101,11 +89,9 @@ export const trackEvent = (
         event_category: category,
         event_label: label,
         value: value,
-      } as Record<string, any>);
-      console.log(' Event tracked:', { action, category, label, value });
+      });
+      console.log('📊 Event tracked:', { action, category, label, value });
     }
-
-    // Also track with Firebase Analytics if available
     if (isFirebaseAnalyticsAvailable() && analytics) {
       logEvent(analytics, action, {
         category,
@@ -117,17 +103,9 @@ export const trackEvent = (
     console.error('Error tracking event:', error);
   }
 };
-
-/**
- * Track button click
- */
 export const trackButtonClick = (buttonName: string, location: string): void => {
   trackEvent('button_click', 'Engagement', `${buttonName} - ${location}`);
 };
-
-/**
- * Track form submission
- */
 export const trackFormSubmission = (formName: string, success: boolean): void => {
   trackEvent(
     success ? 'form_submission_success' : 'form_submission_error',
@@ -159,7 +137,7 @@ export const setUserProperty = (propertyName: string, value: string): void => {
     if (isAnalyticsAvailable() && window.gtag) {
       window.gtag('set', 'user_properties', {
         [propertyName]: value
-      } as Record<string, any>);
+      });
     }
 
     // Also set with Firebase Analytics if available
@@ -172,17 +150,11 @@ export const setUserProperty = (propertyName: string, value: string): void => {
     console.error('Error setting user property:', error);
   }
 };
-
-/**
- * Set user ID for tracking
- */
 export const setAnalyticsUserId = (userId: string): void => {
   try {
     if (isAnalyticsAvailable() && window.gtag) {
-      window.gtag('set', 'user_id', userId);
+      window.gtag('set', 'user_properties', { user_id: userId });
     }
-
-    // Also set with Firebase Analytics if available
     if (isFirebaseAnalyticsAvailable() && analytics) {
       setUserId(analytics, userId);
     }
@@ -191,55 +163,36 @@ export const setAnalyticsUserId = (userId: string): void => {
   }
 };
 
-// Microsoft Clarity Functions
-
-/**
- * Track custom event with Microsoft Clarity
- */
 export const trackClarityEvent = (eventName: string): void => {
   try {
     if (isClarityAvailable() && window.clarity) {
       window.clarity('event', eventName);
-      console.log(' Clarity event tracked:', eventName);
+      console.log('📊 Clarity event tracked:', eventName);
     }
   } catch (error) {
     console.error('Error tracking Clarity event:', error);
   }
 };
-
-/**
- * Set custom tag in Clarity
- */
 export const setClarityTag = (key: string, value: string): void => {
   try {
     if (isClarityAvailable() && window.clarity) {
       window.clarity('set', key, value);
-      console.log(' Clarity tag set:', { key, value });
+      console.log('📊 Clarity tag set:', { key, value });
     }
   } catch (error) {
     console.error('Error setting Clarity tag:', error);
   }
 };
-
-/**
- * Identify user in Clarity
- */
 export const identifyClarityUser = (userId: string, sessionId?: string, pageId?: string): void => {
   try {
     if (isClarityAvailable() && window.clarity) {
-      window.clarity('identify', userId, { sessionId, pageId });
-      console.log(' Clarity user identified:', userId);
+      window.clarity('identify', userId, { sessionId, pageId } as Record<string, unknown>);
+      console.log('📊 Clarity user identified:', userId);
     }
   } catch (error) {
     console.error('Error identifying Clarity user:', error);
   }
 };
-
-// Combined Tracking Functions
-
-/**
- * Track interaction across all analytics platforms
- */
 export const trackInteraction = (
   interactionType: string,
   details: string,
@@ -248,69 +201,45 @@ export const trackInteraction = (
   trackEvent(interactionType, category, details);
   trackClarityEvent(`${interactionType}_${details.replace(/\s+/g, '_').toLowerCase()}`);
 };
-
-/**
- * Track error across all analytics platforms
- */
 export const trackError = (errorType: string, errorMessage: string): void => {
   trackEvent('error', 'User', `${errorType}: ${errorMessage}`);
   trackClarityEvent(`error_${errorType.replace(/\s+/g, '_').toLowerCase()}`);
 };
-
-/**
- * Track search query
- */
 export const trackSearch = (searchTerm: string, resultsCount: number): void => {
   trackEvent('search', 'Engagement', searchTerm, resultsCount);
   trackClarityEvent('search_performed');
 };
-
-/**
- * Track download
- */
 export const trackDownload = (fileName: string, fileType: string): void => {
   trackEvent('download', 'Engagement', `${fileName} (${fileType})`);
   trackClarityEvent('file_download');
 };
-
-/**
- * Track video play
- */
 export const trackVideoPlay = (videoTitle: string): void => {
   trackEvent('video_play', 'Engagement', videoTitle);
   trackClarityEvent('video_interaction');
 };
-
-/**
- * Initialize analytics with user consent
- */
 export const initializeAnalytics = (consentGiven: boolean): void => {
   if (consentGiven) {
-    console.log(' Analytics consent given - tracking enabled');
-    // Enable analytics tracking
+    console.log('📊 Analytics consent given - tracking enabled');
     if (typeof window !== 'undefined' && window.gtag) {
-      // Use dataLayer for consent updates as gtag('consent') is not directly typed
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         'consent': 'update',
         'analytics_storage': 'granted'
       });
-      console.log(' Google Analytics consent updated to granted');
+      console.log('📊 Google Analytics consent updated to granted');
     }
   } else {
-    console.log(' Analytics consent denied - tracking disabled');
+    console.log('📊 Analytics consent denied - tracking disabled');
     if (typeof window !== 'undefined' && window.gtag) {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         'consent': 'update',
         'analytics_storage': 'denied'
       });
-      console.log(' Google Analytics consent updated to denied');
+      console.log('📊 Google Analytics consent updated to denied');
     }
   }
 };
-
-// Export analytics availability checks
 export const analyticsStatus = {
   isGoogleAnalyticsReady: isAnalyticsAvailable,
   isClarityReady: isClarityAvailable,

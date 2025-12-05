@@ -8,6 +8,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Roboto', 'Open Sans', 'sans-serif'],
+        viga: ['Viga', 'sans-serif'],
       },
       colors: {
         phoneColor1: '#DDCBA9',

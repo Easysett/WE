@@ -7,35 +7,35 @@ export const servicesData = {
     features: [
       {
         text: 'Mainland company formation with full UAE market access',
-        image: '/images/services/business-setup/mainland-company.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Free zone company setup with 100% foreign ownership',
-        image: '/images/services/business-setup/freezone-setup.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Trade license processing and renewals',
-        image: '/images/services/business-setup/trade-license.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'PRO services for government approvals',
-        image: '/images/services/business-setup/pro-services.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Business consulting and advisory services',
-        image: '/images/services/business-setup/business-consulting.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Office space solutions and assistance',
-        image: '/images/services/business-setup/office-space.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Bank account opening support',
-        image: '/images/services/business-setup/bank-account.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'VAT registration and compliance',
-        image: '/images/services/business-setup/vat-registration.jpg'
+        image: '/images/services/visa/1.png'
       }
     ]
   },
@@ -46,35 +46,35 @@ export const servicesData = {
     features: [
       {
         text: 'Employment visa processing and renewal',
-        image: '/images/services/visa/employment-visa.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Domestic worker visa services',
-        image: '/images/services/visa/domestic-worker.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Visa status changes and upgrades',
-        image: '/images/services/visa/status-change.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Medical fitness testing coordination',
-        image: '/images/services/visa/medical-test.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Emirates ID application and renewal',
-        image: '/images/services/visa/emirates-id.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Labour card processing',
-        image: '/images/services/visa/labour-card.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Work permit applications',
-        image: '/images/services/visa/work-permit.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Visa cancellation services',
-        image: '/images/services/visa/visa-cancellation.jpg'
+        image: '/images/services/visa/1.png'
       }
     ]
   },
@@ -85,11 +85,11 @@ export const servicesData = {
     features: [
       {
         text: 'Spouse visa sponsorship',
-        image: '/images/services/family-visa/spouse-visa.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Children visa processing',
-        image: '/images/services/family-visa/children-visa.jpg'
+        image: '/images/services/visa/1.png'
       },
       {
         text: 'Parents visa services',

@@ -12,7 +12,7 @@ const AboutPage = () => {
         <div className="relative px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl sm:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="text-blue-600">Easyset</span>
+              About <span className="text-[#2474A8] font-viga">EASYSET</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Effortless Solutions, Every Time – Your trusted partner for documentation and visa services in the UAE
