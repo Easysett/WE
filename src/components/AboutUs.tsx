@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { CheckCircle, Shield, Zap, Users } from 'lucide-react';
 
 const AboutUsMinimal = () => {
