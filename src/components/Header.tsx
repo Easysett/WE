@@ -28,7 +28,7 @@ const Header: React.FC = () => {
             <img 
               src="/logo.png" 
               alt="UAE Easyset Logo" 
-              className="h-14 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           </Link>
 
@@ -37,21 +37,27 @@ const Header: React.FC = () => {
             <nav className="flex items-center space-x-1">
             <Link 
               to="/" 
-              className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-all hover:bg-blue-50 rounded-lg"
+              className="px-4 py-2 text-gray-700 hover:text-[#2475A9] font-medium transition-all hover:bg-blue-50 rounded-lg"
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-all hover:bg-blue-50 rounded-lg"
+              className="px-4 py-2 text-gray-700 hover:text-[#2475A9] font-medium transition-all hover:bg-blue-50 rounded-lg"
             >
-              About
+              About Us
+            </Link>
+            <Link 
+              to="/services/golden-visa" 
+              className="px-4 py-2 text-gray-700 hover:text-[#BC9754] font-medium transition-all hover:bg-blue-50 rounded-lg"
+            >
+              Golden Visa
             </Link>
             
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-all hover:bg-blue-50 rounded-lg flex items-center gap-1">
-                Services
+              <button className="px-4 py-2 text-gray-700 hover:text-[#2475A9] font-medium transition-all hover:bg-blue-50 rounded-lg flex items-center gap-1">
+                 Services
                 <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
               </button>
               <div className="absolute left-0 mt-2 w-72 bg-white rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100">
@@ -60,7 +66,7 @@ const Header: React.FC = () => {
                     <Link
                       key={idx}
                       to={service.path}
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all rounded-lg font-medium"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-[#2475A9] transition-all rounded-lg font-medium"
                     >
                       {service.name}
                     </Link>

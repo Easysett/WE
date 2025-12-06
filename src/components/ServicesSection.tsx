@@ -111,7 +111,7 @@ const ServicesSection: React.FC = () => {
   };
 
   const cardVariants: any = {
-    hidden: { opacity: 0, y: 30 }, // This is fine, no need to change
+    hidden: { opacity: 0, y: 30 }, 
     visible: {
       opacity: 1,
       y: 0,
@@ -139,12 +139,14 @@ const ServicesSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16 md:mb-24"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#2475A9] text-white rounded-full text-sm font-semibold mb-6">
-            <span>Our Expertise</span>
+          <div className="inline-flex items-center gap-2 mb-6">
+            <div className="h-px w-8 bg-blue-600" />
+            <span className="text-[#BC9753] font-semibold text-sm tracking-wide">OUR EXPERTISE</span>
+            <div className="h-px w-8 bg-blue-600" />
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Comprehensive Services
+            Comprehensive <span className="text-[#BC9753]">Services </span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             End-to-end documentation and visa solutions with expert guidance at every step

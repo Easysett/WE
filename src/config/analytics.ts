@@ -177,7 +177,7 @@ export const setClarityTag = (key: string, value: string): void => {
   try {
     if (isClarityAvailable() && window.clarity) {
       window.clarity('set', key, value);
-      console.log('📊 Clarity tag set:', { key, value });
+      console.log(' Clarity tag set:', { key, value });
     }
   } catch (error) {
     console.error('Error setting Clarity tag:', error);
@@ -187,7 +187,7 @@ export const identifyClarityUser = (userId: string, sessionId?: string, pageId?:
   try {
     if (isClarityAvailable() && window.clarity) {
       window.clarity('identify', userId, { sessionId, pageId } as Record<string, unknown>);
-      console.log('📊 Clarity user identified:', userId);
+      console.log(' Clarity user identified:', userId);
     }
   } catch (error) {
     console.error('Error identifying Clarity user:', error);
@@ -219,24 +219,24 @@ export const trackVideoPlay = (videoTitle: string): void => {
 };
 export const initializeAnalytics = (consentGiven: boolean): void => {
   if (consentGiven) {
-    console.log('📊 Analytics consent given - tracking enabled');
+    console.log(' Analytics consent given - tracking enabled');
     if (typeof window !== 'undefined' && window.gtag) {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         'consent': 'update',
         'analytics_storage': 'granted'
       });
-      console.log('📊 Google Analytics consent updated to granted');
+      console.log(' Google Analytics consent updated to granted');
     }
   } else {
-    console.log('📊 Analytics consent denied - tracking disabled');
+    console.log(' Analytics consent denied - tracking disabled');
     if (typeof window !== 'undefined' && window.gtag) {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         'consent': 'update',
         'analytics_storage': 'denied'
       });
-      console.log('📊 Google Analytics consent updated to denied');
+      console.log(' Google Analytics consent updated to denied');
     }
   }
 };

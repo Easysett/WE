@@ -21,7 +21,7 @@ const CTASection: React.FC<CTASectionProps> = ({
   primaryButtonLink = "/contact",
   secondaryButtonText = "Call Us Now",
   secondaryButtonLink = "tel:+971554912339",
-  backgroundColor = "bg-[#2777AA]",
+  backgroundColor = "bg-[#BC9753]",
   highlights = [
     "Fast & Reliable Service",
     "Expert Team",
@@ -127,7 +127,7 @@ const CTASection: React.FC<CTASectionProps> = ({
               href={primaryButtonLink}
               whileHover={{ scale: 1.06, y: -4 }}
               whileTap={{ scale: 0.94 }}
-              className="group relative inline-flex items-center justify-center gap-3 bg-white text-blue-600 px-12 py-5 rounded-xl font-bold text-lg transition-all shadow-2xl overflow-hidden"
+              className="group relative inline-flex items-center justify-center gap-3 bg-white text-[#BC9753] px-12 py-5 rounded-xl font-bold text-lg transition-all shadow-2xl overflow-hidden"
             >
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-xl"

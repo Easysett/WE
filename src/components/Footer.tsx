@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               <img 
                 src="/logo.png" 
                 alt="Easyset Logo" 
-                className="h-14 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             </Link>
             {/* Social Icons */}
@@ -31,35 +31,35 @@ const Footer: React.FC = () => {
                 rel="noopener"
                 href="https://www.facebook.com/share/1C1i27yzck/?mibextid=wwXIfr" 
                 aria-label="Facebook"
-                className="bg-gray-800 hover:bg-blue-600 p-3 rounded-lg transition-all duration-300 transform hover:scale-110"
+                className="bg-gray-800 hover:bg-white p-3 rounded-lg transition-all duration-300 transform hover:scale-110 text-[#BC9753]"
               >
                 <FaFacebookF size={18} />
               </a>
               <a 
                 href="#" 
                 aria-label="Instagram"
-                className="bg-gray-800 hover:bg-pink-600 p-3 rounded-lg transition-all duration-300 transform hover:scale-110"
+                className="bg-gray-800 hover:bg-white p-3 rounded-lg transition-all duration-300 transform hover:scale-110 text-[#BC9753]"
               >
                 <FaInstagram size={18} />
               </a>
               <a 
                 href="#" 
                 aria-label="LinkedIn"
-                className="bg-gray-800 hover:bg-blue-500 p-3 rounded-lg transition-all duration-300 transform hover:scale-110"
+                className="bg-gray-800 hover:bg-white p-3 rounded-lg transition-all duration-300 transform hover:scale-110 text-[#BC9753]"
               >
                 <FaLinkedinIn size={18} />
               </a>
               <a 
                 href="#" 
                 aria-label="Twitter"
-                className="bg-gray-800 hover:bg-blue-400 p-3 rounded-lg transition-all duration-300 transform hover:scale-110"
+                className="bg-gray-800 hover:bg-white p-3 rounded-lg transition-all duration-300 transform hover:scale-110 text-[#BC9753]"
               >
                 <FaTwitter size={18} />
               </a>
               <a 
                 href="#" 
                 aria-label="WhatsApp"
-                className="bg-gray-800 hover:bg-green-500 p-3 rounded-lg transition-all duration-300 transform hover:scale-110"
+                className="bg-gray-800 hover:bg-white p-3 rounded-lg transition-all duration-300 transform hover:scale-110 text-[#BC9753]"
               >
                 <FaWhatsapp size={18} />
               </a>
@@ -136,8 +136,8 @@ const Footer: React.FC = () => {
                 href="tel:+971554912339"
                 className="flex items-start gap-3 group hover:bg-gray-800 p-3 rounded-lg transition-all duration-300"
               >
-                <div className="bg-blue-500/20 p-2 rounded-lg group-hover:bg-blue-500 transition-colors">
-                  <Phone size={18} className="text-blue-400" />
+                <div className="bg-gray-800 p-2 rounded-lg group-hover:bg-white transition-colors">
+                  <Phone size={18} className="text-[#BC9753]" />
                 </div>
                 <div>
                   <p className="font-semibold text-white">Phone</p>
@@ -150,8 +150,8 @@ const Footer: React.FC = () => {
                 href="mailto:info@easyset.ae"
                 className="flex items-start gap-3 group hover:bg-gray-800 p-3 rounded-lg transition-all duration-300"
               >
-                <div className="bg-green-500/20 p-2 rounded-lg group-hover:bg-green-500 transition-colors">
-                  <Mail size={18} className="text-green-400" />
+                <div className="bg-gray-800 p-2 rounded-lg group-hover:bg-white transition-colors">
+                  <Mail size={18} className="text-[#BC9753]" />
                 </div>
                 <div>
                   <p className="font-semibold text-white">Email</p>
@@ -166,8 +166,8 @@ const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="flex items-start gap-3 group hover:bg-gray-800 p-3 rounded-lg transition-all duration-300"
               >
-                <div className="bg-purple-500/20 p-2 rounded-lg group-hover:bg-purple-500 transition-colors">
-                  <MapPin size={18} className="text-purple-400" />
+                <div className="bg-gray-800 p-2 rounded-lg group-hover:bg-white transition-colors">
+                  <MapPin size={18} className="text-[#BC9753]" />
                 </div>
                 <div>
                   <p className="font-semibold text-white">Address</p>

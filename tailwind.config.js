@@ -15,6 +15,13 @@ export default {
         phoneHover1: '#D0B687',
         phoneColor2: '#92BAD4',
         phoneHover2: '#669FC3',
+        golden: {
+          100: '#F7E8C9',  // light golden
+          200: '#E8D39A',
+          300: '#D1B774',
+          400: '#BC9753',  // your brand golden (from earlier)
+          500: '#A67C39',
+        },
       },
     },
   },
