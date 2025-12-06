@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
                 { name: 'Family Visa', path: '/services/family-visa' },
                 { name: 'Attestation', path: '/services/attestation' },
                 { name: 'Translation Services', path: '/services/translation' },
-                { name: 'Amer Services', path: '/services/amer-services' },
+                { name: 'Amer Services', path: '/services/amer-tasheel' },
                 { name: 'PRO Services', path: '/services/pro-services' }
               ].map((service, index) => (
                 <li key={index}>
