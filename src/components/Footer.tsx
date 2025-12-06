@@ -105,8 +105,8 @@ const Footer: React.FC = () => {
                 { name: 'Visa Services', path: '/services/visa-services' },
                 { name: 'Golden Visa', path: '/services/golden-visa' },
                 { name: 'Family Visa', path: '/services/family-visa' },
-                { name: 'Document Attestation', path: '/services/document-attestation' },
-                { name: 'Translation Services', path: '/services/translation-services' },
+                { name: 'Attestation', path: '/services/attestation' },
+                { name: 'Translation Services', path: '/services/translation' },
                 { name: 'Amer Services', path: '/services/amer-services' },
                 { name: 'PRO Services', path: '/services/pro-services' }
               ].map((service, index) => (
