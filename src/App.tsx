@@ -6,6 +6,7 @@ import HomePage from './pages/Home';
 import AboutPage from './pages/About';
 import ServicePage from './pages/Service';
 import BlogPage from './pages/Blog';
+import BlogDetailPage from './pages/BlogDetailPage';
 import ContactPage from './pages/Contact';
 import NotFound from './pages/NotFound';
 import { servicesData } from './data/servicesData';
@@ -38,6 +39,7 @@ const App: React.FC = () => {
           <Route path="/services/notary-legal" element={<ServicePage {...servicesData['notary-legal']} />} />
           <Route path="/services/typing" element={<ServicePage {...servicesData['typing']} />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/sitemap.xml" element={<Sitemap />} />
           <Route path="*" element={<NotFound />} />

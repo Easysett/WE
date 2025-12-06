@@ -112,7 +112,7 @@ const HeroSection: React.FC = () => {
                 >
                   <Link 
                     to="/contact" 
-                    className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-lg text-center"
+                    className="bg-white text-[#BC9753] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg inline-block text-lg text-center"
                   >
                     {heroSlides[currentSlide].ctaText}
                   </Link>

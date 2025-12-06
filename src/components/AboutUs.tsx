@@ -1,5 +1,5 @@
 
-import { CheckCircle, Shield, Zap, Users } from 'lucide-react';
+import { CheckCircle, Zap, Users } from 'lucide-react';
 
 const AboutUsMinimal = () => {
   return (
@@ -9,12 +9,9 @@ const AboutUsMinimal = () => {
           
           {/* Header Section */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 mb-6">
-              <Shield className="w-8 h-8" />
-            </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Effortless Solutions,
-              <span className="block text-blue-600 mt-2">Every Time</span>
+              <span className="block text-[#BC9753] mt-2">Every Time</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Your trusted partner for documentation and visa services in the UAE
@@ -26,14 +23,14 @@ const AboutUsMinimal = () => {
             {/* Left Column - Main Text */}
             <div className="space-y-6">
               <div className="prose prose-lg max-w-none">
-                <p className="text-gray-700 leading-relaxed">
-                  <span className="font-semibold text-gray-900">Easyset</span> is a trusted 
+                <p className="text-gray-700 leading-relaxed text-justify">
+                  <span className="font-medium text-[#2475A9] font-[viga]">Easyset</span> is a trusted 
                   and professional documentation and visa services provider operating in the 
                   United Arab Emirates. With extensive industry experience, we deliver 
                   end-to-end solutions tailored for individuals and businesses.
                 </p>
                 
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed text-justify">
                   Our mission is to streamline the often complex procedures involved in 
                   business setup, visa processing, and attestation. We ensure our clients 
                   enjoy a smooth, hassle-free experience while we efficiently manage all 

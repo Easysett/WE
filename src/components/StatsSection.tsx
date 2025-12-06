@@ -1,4 +1,3 @@
-// components/StatsCounter.tsx
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 
@@ -9,72 +8,74 @@ const StatsCounter: React.FC = () => {
   const [clients, setClients] = useState(0);
   const [visas, setVisas] = useState(0);
   const [companies, setCompanies] = useState(0);
-  const [isCounting, setIsCounting] = useState(false);
+  const hasAnimatedRef = useRef(false);
 
   useEffect(() => {
-    if (isInView && !isCounting) {
-      setIsCounting(true);
-      const animateClients = () => {
-        let start = 0;
-        const end = 500;
-        const duration = 2000; // 2 seconds
-        const increment = end / (duration / 16); // 60fps
-        
-        const counter = () => {
-          start += increment;
-          if (start < end) {
-            setClients(Math.floor(start));
-            requestAnimationFrame(counter);
-          } else {
-            setClients(end);
-          }
-        }; 
-        requestAnimationFrame(counter);
-      };
+    if (!isInView || hasAnimatedRef.current) return;
 
-      // Animate 1000+
-      const animateVisas = () => {
-        let start = 0;
-        const end = 1000;
-        const duration = 2500;
-        const increment = end / (duration / 16);
-        
-        const counter = () => {
-          start += increment;
-          if (start < end) {
-            setVisas(Math.floor(start));
-            requestAnimationFrame(counter);
-          } else {
-            setVisas(end);
-          }
-        }; 
-        setTimeout(() => requestAnimationFrame(counter), 300);
-      };
+    hasAnimatedRef.current = true;
 
-      // Animate 50+
-      const animateCompanies = () => {
-        let start = 0;
-        const end = 50;
-        const duration = 1500;
-        const increment = end / (duration / 16);
-        
-        const counter = () => {
-          start += increment;
-          if (start < end) {
-            setCompanies(Math.floor(start));
-            requestAnimationFrame(counter);
-          } else {
-            setCompanies(end);
-          }
-        }; 
-        setTimeout(() => requestAnimationFrame(counter), 600);
-      };
+    // Animate 500+
+    const animateClients = () => {
+      let start = 0;
+      const end = 500;
+      const duration = 2000;
+      const increment = end / (duration / 16);
+      
+      const counter = () => {
+        start += increment;
+        if (start < end) {
+          setClients(Math.floor(start));
+          requestAnimationFrame(counter);
+        } else {
+          setClients(end);
+        }
+      }; 
+      requestAnimationFrame(counter);
+    };
 
-      animateClients();
-      animateVisas();
-      animateCompanies();
-    }
-  }, [isInView, isCounting]);
+    // Animate 1000+
+    const animateVisas = () => {
+      let start = 0;
+      const end = 1000;
+      const duration = 2500;
+      const increment = end / (duration / 16);
+      
+      const counter = () => {
+        start += increment;
+        if (start < end) {
+          setVisas(Math.floor(start));
+          requestAnimationFrame(counter);
+        } else {
+          setVisas(end);
+        }
+      }; 
+      setTimeout(() => requestAnimationFrame(counter), 300);
+    };
+
+    // Animate 50+
+    const animateCompanies = () => {
+      let start = 0;
+      const end = 50;
+      const duration = 1500;
+      const increment = end / (duration / 16);
+      
+      const counter = () => {
+        start += increment;
+        if (start < end) {
+          setCompanies(Math.floor(start));
+          requestAnimationFrame(counter);
+        } else {
+          setCompanies(end);
+        }
+      }; 
+      setTimeout(() => requestAnimationFrame(counter), 600);
+    };
+
+    animateClients();
+    animateVisas();
+    animateCompanies();
+  }, [isInView]);
 
   return (
     <section ref={containerRef} className="py-16 bg-white">
@@ -87,7 +88,7 @@ const StatsCounter: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+            <div className="text-4xl md:text-5xl font-bold text-[#BC9753] mb-2">
               {clients}
               <span className="ml-1">+</span>
             </div>
@@ -101,7 +102,7 @@ const StatsCounter: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center"
           >
-            <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+            <div className="text-4xl md:text-5xl font-bold text-[#BC9753] mb-2">
               {visas}
               <span className="ml-1">+</span>
             </div>
@@ -115,7 +116,7 @@ const StatsCounter: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center"
           >
-            <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+            <div className="text-4xl md:text-5xl font-bold text-[#BC9753] mb-2">
               {companies}
               <span className="ml-1">+</span>
             </div>
@@ -129,7 +130,7 @@ const StatsCounter: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-center"
           >
-            <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+            <div className="text-4xl md:text-5xl font-bold text-[#BC9753] mb-2">
               24
               <span className="ml-1">/7</span>
             </div>

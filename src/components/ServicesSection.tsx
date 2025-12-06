@@ -139,7 +139,7 @@ const ServicesSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16 md:mb-24"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#2475A9] text-white rounded-full text-sm font-semibold mb-6">
             <span>Our Expertise</span>
           </div>
           
@@ -233,12 +233,12 @@ const ServicesSection: React.FC = () => {
                           transition={{ delay: featureIdx * 0.1 }}
                           className="flex items-center gap-2 text-sm text-gray-600 group-hover:text-gray-800 transition-colors"
                         >
-                          <div className="w-1.5 h-1.5 rounded-full bg-blue-500 group-hover:bg-purple-500 transition-colors flex-shrink-0" />
+                          <div className="w-1.5 h-1.5 rounded-full bg-[#2475A9] group-hover:bg-purple-500 transition-colors flex-shrink-0" />
                           <span className="line-clamp-1 text-xs">{feature}</span>
                         </motion.div>
                       ))}
                       {service.features.length > 2 && (
-                        <div className="text-xs text-blue-600 font-medium">
+                        <div className="text-xs text-[#BC9753] font-medium">
                           +{service.features.length - 2} more services
                         </div>
                       )}
@@ -251,11 +251,11 @@ const ServicesSection: React.FC = () => {
                       transition={{ delay: 0.2 }}
                       className="inline-flex items-center justify-between mt-auto pt-3 border-t border-gray-100 group-hover:border-blue-100 transition-colors"
                     >
-                      <span className="text-blue-600 font-semibold text-xs group-hover:text-purple-600 transition-colors">
+                      <span className="text-[#BC9753] font-semibold text-xs group-hover:text-purple-600 transition-colors">
                         View Details
                       </span>
                       <div className="w-7 h-7 rounded-full bg-blue-50 group-hover:bg-blue-100 flex items-center justify-center transition-colors">
-                        <ArrowRight size={12} className="text-blue-600 group-hover:translate-x-0.5 transition-transform" />
+                        <ArrowRight size={12} className="text-[#BC9753] group-hover:translate-x-0.5 transition-transform" />
                       </div>
                     </motion.div>
                   </div>
