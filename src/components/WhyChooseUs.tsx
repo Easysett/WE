@@ -91,7 +91,7 @@ const WhyChooseUsSimple: React.FC<WhyChooseUsSimpleProps> = ({
                 
                 {/* Number Indicator */}
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-[#F5F5F5] flex items-center justify-center">
                     <span className="text-[#BC9753] font-bold text-lg">
                       {index + 1}
                     </span>
@@ -111,7 +111,7 @@ const WhyChooseUsSimple: React.FC<WhyChooseUsSimpleProps> = ({
                   
                   {/* Stats */}
                   {benefit.stats && (
-                    <div className="inline-block px-4 py-2 bg-blue-50 text-[#BC9753] rounded-lg text-sm font-semibold">
+                    <div className="inline-block px-4 py-2 bg-[#F5F5F5] text-[#BC9753] rounded-lg text-sm font-semibold">
                       {benefit.stats}
                     </div>
                   )}

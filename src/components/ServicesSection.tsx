@@ -16,7 +16,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 'business-setup',
       title: 'Business Setup',
-      image: '/images/hero/2.png',
+      image: '/images/hero/business.jpg',
       description: 'Comprehensive business setup solutions for mainland and free zone companies in the UAE.',
       features: ['Company Formation', 'Trade License', 'Bank Account', 'VAT Registration']
     },
@@ -44,7 +44,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 'amer-tasheel',
       title: 'Amer & Tasheel Services',
-      image: '/images/hero/2.png',
+      image: '/images/hero/tasheel.jpeg',
       description: 'Complete assistance with Amer and Tasheel center services.',
       features: ['Visa Stamping', 'Emirates ID', 'Status Adjustment', 'Entry Permit']
     },
@@ -65,7 +65,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 'notary-legal',
       title: 'Notary & Legal Services',
-      image: '/images/hero/2.png',
+      image: '/images/hero/legal.jpg',
       description: 'Professional notary and legal documentation services.',
       features: ['Document Notarization', 'Power of Attorney', 'Contract Drafting', 'Legal Consultation']
     },

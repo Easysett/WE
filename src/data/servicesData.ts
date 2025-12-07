@@ -2,7 +2,7 @@
 export const servicesData = {
   'business-setup': {
     title: 'Business Setup Services',
-    heroImage: '/images/hero/2.png',
+    heroImage: '/images/hero/business.jpg',
     description: 'Comprehensive business setup solutions for mainland and free zone companies in the UAE. We guide you through every step of establishing your business presence.',
     features: [
       {
@@ -80,7 +80,7 @@ export const servicesData = {
   },
   'family-visa': {
     title: 'Family Visa Services',
-    heroImage: '/images/hero/2.png',
+    heroImage: '/images/hero/family-visa.jpg',
     description: 'Hassle-free family sponsorship and visa services for your loved ones. Bring your family to the UAE with complete documentation support.',
     features: [
       {
@@ -119,7 +119,7 @@ export const servicesData = {
   },
   'golden-visa': {
     title: 'Golden Visa Services',
-    heroImage: '/images/hero/goldenvisa.jpg',
+    heroImage: '/images/hero/golden-visa.jpg',
     description: 'Long-term residency solutions through the UAE Golden Visa program. Secure your future in the UAE with 5 or 10-year residency.',
     features: [
       {
@@ -158,7 +158,7 @@ export const servicesData = {
   },
   'amer-tasheel': {
     title: 'Amer & Tasheel Services',
-    heroImage: '/images/hero/2.png',
+    heroImage: '/images/hero/tasheel.jpeg',
     description: 'Complete assistance with Amer and Tasheel center services. We handle all your government typing and processing needs.',
     features: [
       {
@@ -275,7 +275,7 @@ export const servicesData = {
   },
   'notary-legal': {
     title: 'Notary & Legal Services',
-    heroImage: '/images/hero/2.png',
+    heroImage: '/images/hero/legal.jpg',
     description: 'Professional notary and legal documentation services. Experienced team for all your legal requirements.',
     features: [
       {
