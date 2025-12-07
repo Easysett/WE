@@ -133,6 +133,20 @@ const Header: React.FC = () => {
                 >
                   About
                 </Link>
+                <Link 
+                  to="/services/american-visa"  
+                  className="block py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition" 
+                  onClick={() => setIsOpen(false)}
+                >
+                  American Visa
+                </Link>
+                <Link 
+                  to="/services/golden-visa" 
+                  className="block py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition" 
+                  onClick={() => setIsOpen(false)}
+                >
+                  Golden Visa
+                </Link>
                 
                 <div>
                   <button
