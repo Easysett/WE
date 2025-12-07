@@ -72,7 +72,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 'typing',
       title: 'Typing Services',
-      image: '/images/hero/2.png',
+      image: '/images/hero/typing.jpeg',
       description: 'Fast and accurate typing services for all government documents.',
       features: ['Government Forms', 'Arabic Typing', 'Application Processing', 'Express Service']
     },

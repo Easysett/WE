@@ -314,7 +314,7 @@ export const servicesData = {
   },
   'typing': {
     title: 'Typing Services',
-    heroImage: '/images/hero/2.png',
+    heroImage: '/images/hero/typing.jpeg',
     description: 'Fast and accurate typing services for all government and private documents. Expert typists for Arabic and English documents.',
     features: [
       {
