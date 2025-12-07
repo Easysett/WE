@@ -15,11 +15,11 @@ const StatsCounter: React.FC = () => {
 
     hasAnimatedRef.current = true;
 
-    // Animate 500+
+    // Animate 5000+
     const animateClients = () => {
       let start = 0;
-      const end = 500;
-      const duration = 2000;
+      const end = 5000;
+      const duration = 10000;
       const increment = end / (duration / 16);
       
       const counter = () => {
@@ -30,15 +30,15 @@ const StatsCounter: React.FC = () => {
         } else {
           setClients(end);
         }
-      }; 
+      };
       requestAnimationFrame(counter);
     };
 
-    // Animate 1000+
+    // Animate 10000+
     const animateVisas = () => {
       let start = 0;
-      const end = 1000;
-      const duration = 2500;
+      const end = 10000;
+      const duration = 25000;
       const increment = end / (duration / 16);
       
       const counter = () => {
@@ -49,7 +49,7 @@ const StatsCounter: React.FC = () => {
         } else {
           setVisas(end);
         }
-      }; 
+      };
       setTimeout(() => requestAnimationFrame(counter), 300);
     };
 
@@ -68,7 +68,7 @@ const StatsCounter: React.FC = () => {
         } else {
           setCompanies(end);
         }
-      }; 
+      };
       setTimeout(() => requestAnimationFrame(counter), 600);
     };
 
@@ -81,12 +81,13 @@ const StatsCounter: React.FC = () => {
     <section ref={containerRef} className="py-16 bg-white">
       <div className="container mx-auto px-4 text-center mb-12">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+
           {/* Happy Clients */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            className="flex flex-col items-center text-center"
           >
             <div className="text-4xl md:text-5xl font-bold text-[#BC9753] mb-2">
               {clients}
@@ -100,7 +101,7 @@ const StatsCounter: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-center"
+            className="flex flex-col items-center text-center"
           >
             <div className="text-4xl md:text-5xl font-bold text-[#BC9753] mb-2">
               {visas}
@@ -114,7 +115,7 @@ const StatsCounter: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center"
+            className="flex flex-col items-center text-center"
           >
             <div className="text-4xl md:text-5xl font-bold text-[#BC9753] mb-2">
               {companies}
@@ -128,7 +129,7 @@ const StatsCounter: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-center"
+            className="flex flex-col items-center text-center"
           >
             <div className="text-4xl md:text-5xl font-bold text-[#BC9753] mb-2">
               24
@@ -136,6 +137,7 @@ const StatsCounter: React.FC = () => {
             </div>
             <div className="text-gray-600">Customer Support</div>
           </motion.div>
+
         </div>
       </div>
     </section>

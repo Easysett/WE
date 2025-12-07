@@ -1,5 +1,7 @@
 import { motion, type Variants } from 'framer-motion';
 import { Check, Target, Award, Users, Heart, Shield, Zap } from 'lucide-react';
+import WhyChooseUs from '../components/WhyChooseUs';
+import CTASection from '../components/CTASection';
 
 const AboutPage = () => {
   const containerVariants: Variants = {
@@ -102,18 +104,18 @@ const AboutPage = () => {
             transition={{ delay: 0.5 }}
             className="max-w-6xl mx-auto"
           >
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Vision & Mission</h2>
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">Our Vision & <span className="text-[#BD9855]">Mission</span></h2>
             <div className="grid md:grid-cols-2 gap-8">
               {/* Vision Card */}
               <motion.div
                 whileHover={{ y: -8 }}
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
               >
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#2576AA] to-[#BC9754]"></div>
+                <div className="absolute top-0 left-0 w-full h-2 bg-[#2475A9]"></div>
                 <div className="p-8">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#2576AA] to-[#1a5a85] rounded-xl flex items-center justify-center mr-4">
-                      <Target className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-[#F5F5F5] rounded-xl flex items-center justify-center mr-4">
+                      <Target className="w-8 h-8 text-[#BD9855]" />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
                   </div>
@@ -128,11 +130,11 @@ const AboutPage = () => {
                 whileHover={{ y: -8 }}
                 className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
               >
-                <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#BC9754] to-[#a88545]"></div>
+                <div className="absolute top-0 left-0 w-full h-2 bg-[#2475A9]"></div>
                 <div className="p-8">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-[#BC9754] to-[#a88545] rounded-xl flex items-center justify-center mr-4">
-                      <Award className="w-8 h-8 text-white" />
+                    <div className="w-16 h-16 bg-[#F5F5F5] rounded-xl flex items-center justify-center mr-4">
+                      <Award className="w-8 h-8 text-[#BC9754]" />
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
                   </div>
@@ -155,7 +157,7 @@ const AboutPage = () => {
             transition={{ delay: 0.6 }}
             className="max-w-7xl mx-auto"
           >
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">Our Core Values</h2>
+            <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">Our Core <span className="text-[#BD9855]">Values</span></h2>
             <p className="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-16">
               The principles that guide everything we do
             </p>
@@ -171,37 +173,37 @@ const AboutPage = () => {
                   icon: Check,
                   title: 'Integrity',
                   description: 'We maintain the highest ethical standards in all our dealings and interactions.',
-                  color: 'from-blue-500 to-blue-600'
+                  color: 'from-[#F5F5F5] to-[#F5F5F5]'
                 },
                 {
                   icon: Award,
                   title: 'Excellence',
                   description: 'We strive for excellence in every service we provide to our valued clients.',
-                  color: 'from-[#BC9754] to-[#a88545]'
+                  color: 'from-[#F5F5F5] to-[#F5F5F5]'
                 },
                 {
                   icon: Users,
                   title: 'Transparency',
                   description: 'We believe in clear, honest communication and open dialogue with our clients.',
-                  color: 'from-purple-500 to-purple-600'
+                  color: 'from-[#F5F5F5] to-[#F5F5F5]'
                 },
                 {
                   icon: Heart,
                   title: 'Customer Focus',
                   description: 'Our clients are at the heart of everything we do, driving our commitment to service.',
-                  color: 'from-red-500 to-pink-600'
+                  color: 'from-[#F5F5F5] to-[#F5F5F5]'
                 },
                 {
                   icon: Shield,
                   title: 'Reliability',
                   description: 'We deliver consistent, dependable services you can trust time and time again.',
-                  color: 'from-green-500 to-emerald-600'
+                  color: 'from-[#F5F5F5] to-[#F5F5F5]'
                 },
                 {
                   icon: Zap,
                   title: 'Innovation',
                   description: 'We embrace new technologies and methods to provide efficient, modern solutions.',
-                  color: 'from-yellow-500 to-orange-600'
+                  color: 'from-[#F5F5F5] to-[#F5F5F5]'
                 }
               ].map((value, index) => {
                 const Icon = value.icon;
@@ -214,7 +216,7 @@ const AboutPage = () => {
                   >
                     <div className="p-8">
                       <div className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                        <Icon className="w-8 h-8 text-white" />
+                        <Icon className="w-8 h-8 text-[#BD9855]" />
                       </div>
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                       <p className="text-gray-700 leading-relaxed">{value.description}</p>
@@ -226,88 +228,8 @@ const AboutPage = () => {
           </motion.div>
         </div>
       </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose EasySet?</h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Experience the difference with our professional services
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                {
-                  number: '1000+',
-                  label: 'Happy Clients',
-                  description: 'Trusted by businesses and individuals'
-                },
-                {
-                  number: '15+',
-                  label: 'Years Experience',
-                  description: 'Proven track record in UAE'
-                },
-                {
-                  number: '50+',
-                  label: 'Services Offered',
-                  description: 'Comprehensive solutions'
-                },
-                {
-                  number: '24/7',
-                  label: 'Support Available',
-                  description: 'Always here to help'
-                }
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 + index * 0.1 }}
-                  whileHover={{ y: -8 }}
-                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 text-center border border-gray-100"
-                >
-                  <div className="text-4xl font-bold text-[#2576AA] mb-2">{stat.number}</div>
-                  <div className="text-lg font-semibold text-gray-900 mb-1">{stat.label}</div>
-                  <div className="text-sm text-gray-600">{stat.description}</div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#2576AA] to-[#1a5a85]">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9 }}
-            className="max-w-4xl mx-auto text-center text-white"
-          >
-            <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Let us handle your documentation and visa needs. Contact our expert team today for a free consultation.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-white text-[#2576AA] rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
-                Contact Us Today
-              </button>
-              <button className="px-8 py-4 bg-[#BC9754] text-white rounded-lg font-semibold hover:bg-[#a88545] transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
-                View Our Services
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <WhyChooseUs />
+      <CTASection />
     </div>
   );
 };

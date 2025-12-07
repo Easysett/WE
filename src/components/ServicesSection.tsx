@@ -214,7 +214,7 @@ const ServicesSection: React.FC = () => {
                       whileHover={{ rotate: 180, scale: 1.1 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <ArrowRight size={14} className="text-blue-600" />
+                      <ArrowRight size={14} className="text-[#BC9753]" />
                     </motion.div>
                   </div>
 
@@ -256,7 +256,7 @@ const ServicesSection: React.FC = () => {
                       <span className="text-[#BC9753] font-semibold text-xs group-hover:text-purple-600 transition-colors">
                         View Details
                       </span>
-                      <div className="w-7 h-7 rounded-full bg-blue-50 group-hover:bg-blue-100 flex items-center justify-center transition-colors">
+                      <div className="w-7 h-7 rounded-full bg-[#F5F5F5] group-hover:bg-blue-100 flex items-center justify-center transition-colors">
                         <ArrowRight size={12} className="text-[#BC9753] group-hover:translate-x-0.5 transition-transform" />
                       </div>
                     </motion.div>

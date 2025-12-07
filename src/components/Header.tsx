@@ -11,6 +11,7 @@ const Header: React.FC = () => {
   const services: NavigationService[] = [
     { name: 'Business Setup', path: '/services/business-setup' },
     { name: 'Visa Services', path: '/services/visa-services' },
+    {name: 'American Visa Services', path: '/services/american-visa' },
     { name: 'Family Visa Services', path: '/services/family-visa' },
     { name: 'Golden Visa Services', path: '/services/golden-visa' },
     { name: 'Amer & Tasheel Services', path: '/services/amer-tasheel' },
@@ -52,6 +53,12 @@ const Header: React.FC = () => {
               className="px-4 py-2 text-gray-700 hover:text-[#BC9754] font-medium transition-all hover:bg-blue-50 rounded-lg"
             >
               Golden Visa
+            </Link>
+            <Link 
+              to="/services/american-visa" 
+              className="px-4 py-2 text-gray-700 hover:text-[#2475A9] font-medium transition-all hover:bg-blue-50 rounded-lg"
+            >
+              American Visa
             </Link>
             
             {/* Services Dropdown */}

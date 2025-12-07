@@ -350,5 +350,44 @@ export const servicesData = {
         image: '/images/services/typing/express.jpg'
       }
     ]
+  },
+  'american-visa': {
+    title: 'American Visa Services',
+    heroImage: '/images/hero/2.png',
+    description: 'Fast and efficient American visa processing services. Professional team for all your American visa requirements.',
+    features: [
+      {
+        text: 'Visa application submission',
+        image: '/images/services/american-visa/application.jpg'
+      },
+      {
+        text: 'Document preparation and review',
+        image: '/images/services/american-visa/document-preparation.jpg'
+      },
+      {
+        text: 'Visa processing services',
+        image: '/images/services/american-visa/visa-processing.jpg'
+      },
+      {
+        text: 'Visa renewal services',
+        image: '/images/services/american-visa/visa-renewal.jpg'
+      },
+      {
+        text: 'Visa status change services',
+        image: '/images/services/american-visa/visa-status.jpg'
+      },
+      {
+        text: 'Visa medical testing services',
+        image: '/images/services/american-visa/visa-medical.jpg'
+      },
+      {
+        text: 'Visa application processing',
+        image: '/images/services/american-visa/application-processing.jpg'
+      },
+      {
+        text: 'Visa document translation',
+        image: '/images/services/american-visa/visa-translation.jpg'
+      }
+    ]
   }
 };

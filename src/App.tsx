@@ -37,6 +37,7 @@ const App: React.FC = () => {
           <Route path="/services/attestation" element={<ServicePage {...servicesData['attestation']} />} />
           <Route path="/services/translation" element={<ServicePage {...servicesData['translation']} />} />
           <Route path="/services/notary-legal" element={<ServicePage {...servicesData['notary-legal']} />} />
+          <Route path="/services/american-visa" element={<ServicePage {...servicesData['american-visa']} />} />
           <Route path="/services/typing" element={<ServicePage {...servicesData['typing']} />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />

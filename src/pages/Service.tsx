@@ -101,7 +101,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, heroImage, description
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What We Offer
+              What We <span className="text-primary text-[#BC9753]">Offer</span>
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Comprehensive solutions tailored to your needs

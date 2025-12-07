@@ -48,7 +48,7 @@ const AboutUsMinimal = () => {
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-[#BC9753]">
+                    <div className="w-10 h-10 rounded-lg bg-[#F5F5F5] flex items-center justify-center text-[#BC9753]">
                       <ChevronsRight className="w-8 h-8" />
                     </div>
                   </div>
@@ -60,7 +60,7 @@ const AboutUsMinimal = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-[#BC9753]">
+                    <div className="w-10 h-10 rounded-lg bg-[#F5F5F5] flex items-center justify-center text-[#BC9753]">
                       <ChevronsRight className="w-8 h-8" />
                     </div>
                   </div>
@@ -72,7 +72,7 @@ const AboutUsMinimal = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-[#BC9753]">
+                    <div className="w-10 h-10 rounded-lg bg-[#F5F5F5] flex items-center justify-center text-[#BC9753]">
                       <ChevronsRight className="w-8 h-8" />
                     </div>
                   </div>
