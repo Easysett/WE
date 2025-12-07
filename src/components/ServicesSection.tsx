@@ -16,7 +16,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 'business-setup',
       title: 'Business Setup',
-      image: '/images/hero/business.jpg',
+      image: '/images/hero/business.jpeg',
       description: 'Comprehensive business setup solutions for mainland and free zone companies in the UAE.',
       features: ['Company Formation', 'Trade License', 'Bank Account', 'VAT Registration']
     },
@@ -51,7 +51,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 'attestation',
       title: 'Attestation Services',
-      image: '/images/hero/2.png',
+      image: '/images/hero/attestation.jpg',
       description: 'Professional document attestation and legalization services.',
       features: ['Educational Certificates', 'Marriage Certificates', 'Commercial Documents', 'Embassy Attestation']
     },
@@ -79,14 +79,14 @@ const ServicesSection: React.FC = () => {
     {
       id: 'travel-services',
       title: 'Travel Services',
-      image: '/images/hero/2.png',
+      image: '/images/hero/travel.jpg',
       description: 'Complete travel assistance including tickets and hotel bookings.',
       features: ['Flight Tickets', 'Hotel Booking', 'Travel Insurance', 'Visa Processing']
     },
     {
-      id: 'insurance',
+      id: 'insurance-services',
       title: 'Insurance Services',
-      image: '/images/hero/2.png',
+      image: '/images/hero/insurance.jpg',
       description: 'Comprehensive insurance solutions for health and travel.',
       features: ['Health Insurance', 'Travel Insurance', 'Car Insurance', 'Life Insurance']
     },

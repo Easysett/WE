@@ -2,7 +2,7 @@
 export const servicesData = {
   'business-setup': {
     title: 'Business Setup Services',
-    heroImage: '/images/hero/business.jpg',
+    heroImage: '/images/hero/business.jpeg',
     description: 'Comprehensive business setup solutions for mainland and free zone companies in the UAE. We guide you through every step of establishing your business presence.',
     features: [
       {
@@ -197,7 +197,7 @@ export const servicesData = {
   },
   'attestation': {
     title: 'Attestation Services',
-    heroImage: '/images/hero/2.png',
+    heroImage: '/images/hero/attestation.jpg',
     description: 'Professional document attestation and legalization services. We handle attestation from home country to UAE MOFA.',
     features: [
       {
@@ -389,5 +389,83 @@ export const servicesData = {
         image: '/images/services/american-visa/visa-translation.jpg'
       }
     ]
-  }
+  },
+  'insurance-services': {
+  title: 'Insurance Services',
+  heroImage: '/images/hero/insurance.jpg',
+  description: 'Comprehensive insurance solutions designed to protect workers and ensure financial security. Reliable coverage tailored for employee safety, health, and job security.',
+  features: [
+    {
+      text: 'WPP (Worker Protection Program) coverage services',
+      image: '/images/services/insurance/wpp.jpg'
+    },
+    {
+      text: 'ILOE (Involuntary Loss Of Employment) claim assistance',
+      image: '/images/services/insurance/iloe.jpg'
+    },
+    {
+      text: 'WHI (Workers Health Insurance) enrollment services',
+      image: '/images/services/insurance/whi.jpg'
+    },
+    {
+      text: 'Policy documentation and verification',
+      image: '/images/services/insurance/policy-docs.jpg'
+    },
+    {
+      text: 'Claim submission and tracking support',
+      image: '/images/services/insurance/claim-tracking.jpg'
+    },
+    {
+      text: 'Insurance policy renewal services',
+      image: '/images/services/insurance/policy-renewal.jpg'
+    },
+    {
+      text: 'Employee insurance advisory and consultation',
+      image: '/images/services/insurance/consultation.jpg'
+    },
+    {
+      text: 'Coverage upgrades and plan customization',
+      image: '/images/services/insurance/coverage-upgrade.jpg'
+    }
+  ]
+},
+'travel-services': {
+    title: 'Travel Services',
+    heroImage: '/images/hero/travel.jpg',
+    description: 'Complete travel solutions for leisure and business travelers. From flight bookings to visa assistance, we handle all your travel needs.',
+    features: [
+      {
+        text: 'International and domestic flight bookings',
+        image: '/images/services/travel/flights.jpg'
+      },
+      {
+        text: 'Hotel reservations and accommodation',
+        image: '/images/services/travel/hotels.jpg'
+      },
+      {
+        text: 'Tourist visa processing and assistance',
+        image: '/images/services/travel/tourist-visa.jpg'
+      },
+      {
+        text: 'Travel insurance arrangements',
+        image: '/images/services/travel/insurance.jpg'
+      },
+      {
+        text: 'Holiday packages and tour planning',
+        image: '/images/services/travel/packages.jpg'
+      },
+      {
+        text: 'Corporate travel management',
+        image: '/images/services/travel/corporate.jpg'
+      },
+      {
+        text: 'Airport transfer services',
+        image: '/images/services/travel/transfers.jpg'
+      },
+      {
+        text: '24/7 travel support and assistance',
+        image: '/images/services/travel/support.jpg'
+      }
+    ]
+  },
 };

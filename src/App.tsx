@@ -33,11 +33,13 @@ const App: React.FC = () => {
           <Route path="/services/visa-services" element={<ServicePage {...servicesData['visa-services']} />} />
           <Route path="/services/family-visa" element={<ServicePage {...servicesData['family-visa']} />} />
           <Route path="/services/golden-visa" element={<ServicePage {...servicesData['golden-visa']} />} />
-          <Route path="/services/amer-tasheel" element={<ServicePage {...servicesData['amer-tasheel']} />} />
+          <Route path="/services/amer-tasheel" element={<ServicePage {...servicesData['amer-tasheel']} />} />S
           <Route path="/services/attestation" element={<ServicePage {...servicesData['attestation']} />} />
           <Route path="/services/translation" element={<ServicePage {...servicesData['translation']} />} />
           <Route path="/services/notary-legal" element={<ServicePage {...servicesData['notary-legal']} />} />
           <Route path="/services/american-visa" element={<ServicePage {...servicesData['american-visa']} />} />
+          <Route path="/services/insurance-services" element={<ServicePage {...servicesData['insurance-services']} />} />
+          <Route path="/services/travel-services" element={<ServicePage {...servicesData['travel-services']} /> }/>
           <Route path="/services/typing" element={<ServicePage {...servicesData['typing']} />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
