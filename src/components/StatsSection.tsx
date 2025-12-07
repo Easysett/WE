@@ -37,8 +37,8 @@ const StatsCounter: React.FC = () => {
     // Animate 10000+
     const animateVisas = () => {
       let start = 0;
-      const end = 10000;
-      const duration = 25000;
+      const end = 1000;
+      const duration = 2500;
       const increment = end / (duration / 16);
       
       const counter = () => {
