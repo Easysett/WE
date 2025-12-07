@@ -142,7 +142,7 @@ const Header: React.FC = () => {
                 </Link>
                 <Link 
                   to="/services/golden-visa" 
-                  className="block py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition" 
+                  className="block py-3 px-4 text-gray-700 hover:text-[#BC9753] hover:bg-blue-50 rounded-lg font-medium transition" 
                   onClick={() => setIsOpen(false)}
                 >
                   Golden Visa

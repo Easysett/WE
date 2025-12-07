@@ -30,14 +30,14 @@ const ServicesSection: React.FC = () => {
     {
       id: 'family-visa',
       title: 'Family Visa',
-      image: '/images/hero/2.png',
+      image: '/images/hero/family-visa.jpg',
       description: 'Hassle-free family sponsorship and visa services for your loved ones.',
       features: ['Spouse Visa', 'Children Visa', 'Parents Visa', 'Documentation Support']
     },
     {
       id: 'golden-visa',
       title: 'Golden Visa',
-      image: '/images/hero/2.png',
+      image: '/images/hero/golden-visa.jpg',
       description: 'Long-term residency solutions through the UAE Golden Visa program.',
       features: ['Investor Visa', 'Entrepreneur Visa', 'Professional Visa', 'Student Visa']
     },

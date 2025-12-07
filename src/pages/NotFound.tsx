@@ -21,7 +21,7 @@ const NotFound = () => {
         
         <a
           href="/"
-          className="inline-flex items-center justify-center gap-2 bg-[#B0A78E] hover:bg-[#9a9179] text-white px-6 sm:px-10 md:px-12 py-2.5 sm:py-3 md:py-3.5 rounded-full text-sm sm:text-base md:text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg mt-6 w-full sm:w-auto max-w-xs"
+          className="inline-flex items-center justify-center gap-2 bg-[#BC9753] hover:bg-[#BC9753] text-white px-6 sm:px-10 md:px-12 py-2.5 sm:py-3 md:py-3.5 rounded-full text-sm sm:text-base md:text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg mt-6 w-full sm:w-auto max-w-xs"
         >
           Go to Home
           <ArrowLeft size={18} className="rotate-180 sm:w-5 sm:h-5" />

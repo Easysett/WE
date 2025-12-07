@@ -119,7 +119,7 @@ export const servicesData = {
   },
   'golden-visa': {
     title: 'Golden Visa Services',
-    heroImage: '/images/hero/2.png',
+    heroImage: '/images/hero/goldenvisa.jpg',
     description: 'Long-term residency solutions through the UAE Golden Visa program. Secure your future in the UAE with 5 or 10-year residency.',
     features: [
       {
