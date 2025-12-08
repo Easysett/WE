@@ -11,7 +11,7 @@ interface Service {
   features: string[];
 }
 
-const ServicesSection: React.FC = () => {
+const DetailServices: React.FC = () => {
   const services: Service[] = [
     {
       id: 'business-setup',
@@ -96,6 +96,20 @@ const ServicesSection: React.FC = () => {
       image: '/images/hero/2.png',
       description: 'Professional document clearance and processing services.',
       features: ['MOFA Attestation', 'Immigration Clearance', 'Customs Clearance', 'Legalization']
+    },
+    {
+        id: 'pro-services',
+        title: 'Professional Services',
+        image: '/images/hero/2.png',
+        description: 'Comprehensive professional services for individuals and businesses.',
+        features: ['Resume Writing', 'Cover Letter Writing', 'Business Plan Writing', 'Legal Consulting']
+    },
+    {
+        id: 'tourist-visa',
+        title: 'Tourist Visa',
+        image: '/images/hero/tourist.jpg',
+        description: 'Hassle-free tourist visa services for your loved ones.',
+        features: ['Spouse Visa', 'Children Visa', 'Parents Visa', 'Documentation Support']
     }
   ];
 
@@ -269,29 +283,9 @@ const ServicesSection: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* More Services Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="flex justify-center mt-16 md:mt-20"
-        >
-          <Link 
-            to="/services"
-            className="group relative inline-flex items-center gap-3 px-5 md:px-12 py-3 rounded-[5px] bg-transparent text-[#BC9753] font-semibold text-base md:text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-[#BC9753]/5 overflow-hidden border-2 border-[#BC9753]"
-          >
-            {/* Background shine effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-full group-hover:translate-x-0 transition-transform duration-700" />
-            
-            <span className="relative">Explore All Services</span>
-            <ArrowRight size={18} className="relative group-hover:translate-x-1 transition-transform duration-300" />
-          </Link>
-        </motion.div>
       </div>
     </section>
   );
 };
 
-export default ServicesSection;
+export default DetailServices;

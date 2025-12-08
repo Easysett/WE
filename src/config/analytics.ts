@@ -65,7 +65,7 @@ export const trackPageView = (path: string, title?: string): void => {
       };
 
       window.gtag('config', measurementId, pageViewData);
-      console.log('📊 Page view tracked:', path);
+      console.log(' Page view tracked:', path);
     }
     if (isFirebaseAnalyticsAvailable() && analytics) {
       logEvent(analytics, 'page_view', {
@@ -90,7 +90,7 @@ export const trackEvent = (
         event_label: label,
         value: value,
       });
-      console.log('📊 Event tracked:', { action, category, label, value });
+      console.log(' Event tracked:', { action, category, label, value });
     }
     if (isFirebaseAnalyticsAvailable() && analytics) {
       logEvent(analytics, action, {
@@ -167,7 +167,7 @@ export const trackClarityEvent = (eventName: string): void => {
   try {
     if (isClarityAvailable() && window.clarity) {
       window.clarity('event', eventName);
-      console.log('📊 Clarity event tracked:', eventName);
+      console.log(' Clarity event tracked:', eventName);
     }
   } catch (error) {
     console.error('Error tracking Clarity event:', error);

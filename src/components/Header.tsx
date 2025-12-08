@@ -11,13 +11,14 @@ const Header: React.FC = () => {
   const services: NavigationService[] = [
     { name: 'Business Setup', path: '/services/business-setup' },
     { name: 'Visa Services', path: '/services/visa-services' },
-    {name: 'American Visa Services', path: '/services/american-visa' },
+    {name: 'Travel Services', path: '/services/travel-services' },
     { name: 'Family Visa Services', path: '/services/family-visa' },
-    { name: 'Golden Visa Services', path: '/services/golden-visa' },
+    { name: 'PRO Services', path: '/services/pro-services'}, 
     { name: 'Amer & Tasheel Services', path: '/services/amer-tasheel' },
     { name: 'Attestation', path: '/services/attestation' },
     { name: 'Translation', path: '/services/translation' },
     { name: 'Notary & Legal Services', path: '/services/notary-legal' },
+    { name: 'PRO Services', path: '/services/pro-services' },
     { name: 'Typing Services', path: '/services/typing' }
   ];
 
@@ -55,10 +56,10 @@ const Header: React.FC = () => {
               Golden Visa
             </Link>
             <Link 
-              to="/services/american-visa" 
+              to="/services/tourist-visa" 
               className="px-4 py-2 text-gray-700 hover:text-[#2475A9] font-medium transition-all hover:bg-blue-50 rounded-lg"
             >
-              American Visa
+              Tourist Visa
             </Link>
             
             {/* Services Dropdown */}
@@ -93,10 +94,9 @@ const Header: React.FC = () => {
             {/* Contact Button - Desktop */}
             <Link 
               to="/contact" 
-              className="ml-4 relative px-8 py-3 bg-gradient-to-r from-[#2576AA] to-[#2576AA] text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:from-[#BC9754] hover:to-[#BC9754] transition-all duration-300 transform hover:scale-105 overflow-hidden group"
+              className="ml-4 relative inline-flex items-center gap-2 px-8 py-3 bg-transparent text-[#BC9753] font-semibold rounded-[5px] shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border-2 border-[#BC9753] hover:bg-[#BC9753]/5 group"
             >
               <span className="relative z-10">Contact Us</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#BC9754] to-[#BC9754] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </div>
 
@@ -134,11 +134,11 @@ const Header: React.FC = () => {
                   About
                 </Link>
                 <Link 
-                  to="/services/american-visa"  
+                  to="/services/tourist-visa"  
                   className="block py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg font-medium transition" 
                   onClick={() => setIsOpen(false)}
                 >
-                  American Visa
+                  Tourist Visa
                 </Link>
                 <Link 
                   to="/services/golden-visa" 
@@ -193,7 +193,7 @@ const Header: React.FC = () => {
                 {/* Contact Button - Mobile */}
                 <Link 
                   to="/contact" 
-                  className="block mt-4 py-3 px-4 bg-gradient-to-r from-[#2576AA] to-[#2576AA] text-white text-center font-semibold rounded-full shadow-lg hover:shadow-xl transition-all"
+                  className="block mt-4 py-3 px-4 bg-transparent text-[#BC9753] text-center font-semibold rounded-[5px] border-2 border-[#BC9753] hover:bg-[#BC9753]/5 transition-all"
                   onClick={() => setIsOpen(false)}
                 >
                   Contact Us

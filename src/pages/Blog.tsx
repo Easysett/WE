@@ -102,7 +102,7 @@ const BlogPage: React.FC = () => {
               transition={{ delay: 0.2 }}
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg"
             >
-              Our Blog
+              Our <span className="text-[#2476AA] font-[viga]">Blog</span>
             </motion.h1>
             
             {/* Hero Description */}

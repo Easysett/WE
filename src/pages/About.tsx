@@ -53,7 +53,7 @@ const AboutPage = () => {
               transition={{ delay: 0.2 }}
               className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg"
             >
-              About <span className="text-[#2476AA] font-[viga]">EasySet</span>
+              About <span className="text-[#2476AA] font-[viga]">Easyset</span>
             </motion.h1>
             
             {/* Hero Description */}
@@ -86,7 +86,7 @@ const AboutPage = () => {
         >
           <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify">
             <p>
-              Easyset is a trusted and professional documentation and visa services provider operating in the United Arab Emirates. With extensive industry experience, we deliver end-to-end solutions tailored for individuals and businesses navigating the UAE's regulatory and administrative requirements.
+              <span className="text-[#2476AA] font-[viga] text-medium">Easyset</span> is a trusted and professional documentation and visa services provider operating in the United Arab Emirates. With extensive industry experience, we deliver end-to-end solutions tailored for individuals and businesses navigating the UAE's regulatory and administrative requirements.
             </p>
             <p>
               Our mission is to streamline the often complex procedures involved in business setup, visa processing, attestation, and related government services. We ensure our clients enjoy a smooth, hassle-free experience while we efficiently manage all necessary paperwork and formalities—allowing them to focus on their goals with complete peace of mind.

@@ -141,6 +141,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-gray-800">Phone</p>
+                  <p className="text-gray-700">+971 55 465 0123</p>
                   <p className="text-gray-700">+971 55 491 2339</p>
                 </div>
               </a>
@@ -188,14 +189,14 @@ const Footer: React.FC = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-800 text-sm text-center md:text-left">
-              &copy; {new Date().getFullYear()} Easyset Business Solutions LLC. All rights reserved.
+              &copy; {new Date().getFullYear()} Easyset Business Services LLC. All rights reserved.
             </div>
             
             <div className="flex gap-6 text-sm">
-              <Link to="/privacy" className="text-gray-700 hover:text-white transition">
+              <Link to="/privacy-policy" className="text-gray-700 hover:text-white transition">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-700 hover:text-white transition">
+              <Link to="terms-conditions " className="text-gray-700 hover:text-white transition">
                 Terms of Service
               </Link>
               <Link to="/sitemap.xml" className="text-gray-700 hover:text-white transition">

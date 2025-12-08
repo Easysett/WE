@@ -8,10 +8,13 @@ import ServicePage from './pages/Service';
 import BlogPage from './pages/Blog';
 import BlogDetailPage from './pages/BlogDetailPage';
 import ContactPage from './pages/Contact';
+import ServicesPage from './pages/ServicesDetail';
 import NotFound from './pages/NotFound';
 import { servicesData } from './data/servicesData';
 import { trackPageView } from './config/analytics';
 import Sitemap from './pages/Sitemap';
+import PrivacyPolicyPage from './pages/Privacy';
+import TermsConditionsPage from './pages/Terms';
 import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
@@ -29,6 +32,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
           <Route path="/services/business-setup" element={<ServicePage {...servicesData['business-setup']} />} />
           <Route path="/services/visa-services" element={<ServicePage {...servicesData['visa-services']} />} />
           <Route path="/services/family-visa" element={<ServicePage {...servicesData['family-visa']} />} />
@@ -37,14 +41,18 @@ const App: React.FC = () => {
           <Route path="/services/attestation" element={<ServicePage {...servicesData['attestation']} />} />
           <Route path="/services/translation" element={<ServicePage {...servicesData['translation']} />} />
           <Route path="/services/notary-legal" element={<ServicePage {...servicesData['notary-legal']} />} />
-          <Route path="/services/american-visa" element={<ServicePage {...servicesData['american-visa']} />} />
+          <Route path="/services/tourist-visa" element={<ServicePage {...servicesData['tourist-visa']} />} />
           <Route path="/services/insurance-services" element={<ServicePage {...servicesData['insurance-services']} />} />
           <Route path="/services/travel-services" element={<ServicePage {...servicesData['travel-services']} /> }/>
+          <Route path="/services/pro-services" element={<ServicePage {...servicesData['pro-services']} />} />
+          <Route path="/services/document-clearance" element={<ServicePage {...servicesData['document-clearance']} />} />
           <Route path="/services/typing" element={<ServicePage {...servicesData['typing']} />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/sitemap.xml" element={<Sitemap />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+          <Route path="/terms-conditions" element={<TermsConditionsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -351,45 +351,6 @@ export const servicesData = {
       }
     ]
   },
-  'american-visa': {
-    title: 'American Visa Services',
-    heroImage: '/images/hero/2.png',
-    description: 'Fast and efficient American visa processing services. Professional team for all your American visa requirements.',
-    features: [
-      {
-        text: 'Visa application submission',
-        image: '/images/services/american-visa/application.jpg'
-      },
-      {
-        text: 'Document preparation and review',
-        image: '/images/services/american-visa/document-preparation.jpg'
-      },
-      {
-        text: 'Visa processing services',
-        image: '/images/services/american-visa/visa-processing.jpg'
-      },
-      {
-        text: 'Visa renewal services',
-        image: '/images/services/american-visa/visa-renewal.jpg'
-      },
-      {
-        text: 'Visa status change services',
-        image: '/images/services/american-visa/visa-status.jpg'
-      },
-      {
-        text: 'Visa medical testing services',
-        image: '/images/services/american-visa/visa-medical.jpg'
-      },
-      {
-        text: 'Visa application processing',
-        image: '/images/services/american-visa/application-processing.jpg'
-      },
-      {
-        text: 'Visa document translation',
-        image: '/images/services/american-visa/visa-translation.jpg'
-      }
-    ]
-  },
   'insurance-services': {
   title: 'Insurance Services',
   heroImage: '/images/hero/insurance.jpg',
@@ -468,4 +429,153 @@ export const servicesData = {
       }
     ]
   },
+  'tourist-visa': {
+  title: 'Tourist Visa Services',
+  heroImage: '/images/hero/2.png',
+  description: 'Comprehensive tourist visa processing services for American, Schengen, European, US, and Australian destinations. Expert assistance for all your international travel visa requirements.',
+  features: [
+    {
+      text: 'American visa application services',
+      image: '/images/services/tourist-visa/american-visa.jpg'
+    },
+    {
+      text: 'Schengen visa processing',
+      image: '/images/services/tourist-visa/schengen-visa.jpg'
+    },
+    {
+      text: 'European visa services',
+      image: '/images/services/tourist-visa/european-visa.jpg'
+    },
+    {
+      text: 'US tourist visa assistance',
+      image: '/images/services/tourist-visa/us-visa.jpg'
+    },
+    {
+      text: 'Australian visa processing',
+      image: '/images/services/tourist-visa/australian-visa.jpg'
+    },
+    {
+      text: 'Document preparation and review',
+      image: '/images/services/tourist-visa/document-preparation.jpg'
+    },
+    {
+      text: 'Visa application submission',
+      image: '/images/services/tourist-visa/application-submission.jpg'
+    },
+    {
+      text: 'Visa appointment scheduling',
+      image: '/images/services/tourist-visa/appointment-scheduling.jpg'
+    }
+  ]
+},
+'pro-services': {
+  title: 'PRO Services',
+  heroImage: '/images/hero/pro-services.png',
+  description: 'Complete PRO (Public Relations Officer) services for all your government documentation and business setup needs in the UAE. Professional assistance for hassle-free processing.',
+  features: [
+    {
+      text: 'Business license processing',
+      image: '/images/services/pro-services/business-license.jpg'
+    },
+    {
+      text: 'Company formation and registration',
+      image: '/images/services/pro-services/company-formation.jpg'
+    },
+    {
+      text: 'Employment visa processing',
+      image: '/images/services/pro-services/employment-visa.jpg'
+    },
+    {
+      text: 'Emirates ID services',
+      image: '/images/services/pro-services/emirates-id.jpg'
+    },
+    {
+      text: 'Labor card processing',
+      image: '/images/services/pro-services/labor-card.jpg'
+    },
+    {
+      text: 'Trade license renewal',
+      image: '/images/services/pro-services/trade-license.jpg'
+    },
+    {
+      text: 'Immigration services',
+      image: '/images/services/pro-services/immigration.jpg'
+    },
+    {
+      text: 'Document attestation and typing',
+      image: '/images/services/pro-services/document-attestation.jpg'
+    },
+    {
+      text: 'Visa cancellation services',
+      image: '/images/services/pro-services/visa-cancellation.jpg'
+    },
+    {
+      text: 'Ministry approvals and permits',
+      image: '/images/services/pro-services/ministry-approvals.jpg'
+    },
+    {
+      text: 'Establishment card services',
+      image: '/images/services/pro-services/establishment-card.jpg'
+    },
+    {
+      text: 'Partner visa processing',
+      image: '/images/services/pro-services/partner-visa.jpg'
+    }
+  ]
+},
+'document-clearance': {
+  title: 'Document Clearance',
+  heroImage: '/images/hero/document-clearance.png',
+  description: 'Reliable document clearance and verification services for individuals and businesses, ensuring transparent and compliant government processing.',
+  features: [
+    {
+      text: 'Police clearance certificates',
+      image: '/images/services/document-clearance/police-clearance.jpg'
+    },
+    {
+      text: 'Character verification and background checks',
+      image: '/images/services/document-clearance/character-verification.jpg'
+    },
+    {
+      text: 'Document attestation and authentication',
+      image: '/images/services/document-clearance/document-attestation.jpg'
+    },
+    {
+      text: 'Government document verification',
+      image: '/images/services/document-clearance/gov-verification.jpg'
+    },
+    {
+      text: 'Educational certificate clearance',
+      image: '/images/services/document-clearance/education-clearance.jpg'
+    },
+    {
+      text: 'Professional qualification verification',
+      image: '/images/services/document-clearance/qualification-verification.jpg'
+    },
+    {
+      text: 'Travel document clearance',
+      image: '/images/services/document-clearance/travel-clearance.jpg'
+    },
+    {
+      text: 'Medical records clearance',
+      image: '/images/services/document-clearance/medical-records.jpg'
+    },
+    {
+      text: 'Employment reference clearance',
+      image: '/images/services/document-clearance/employment-reference.jpg'
+    },
+    {
+      text: 'Financial document verification',
+      image: '/images/services/document-clearance/financial-verification.jpg'
+    },
+    {
+      text: 'Legal document review and clearance',
+      image: '/images/services/document-clearance/legal-documents.jpg'
+    },
+    {
+      text: 'Residency status clearance',
+      image: '/images/services/document-clearance/residency-clearance.jpg'
+    }
+  ]
+}
 };
