@@ -5,6 +5,7 @@ import CTASection from '../components/CTASection';
 import WhyChooseUs from '../components/WhyChooseUs';
 import StatsSection from '../components/StatsSection';
 import AboutUs from '../components/AboutUs';
+import TestimonialsSection from '../components/Testimonials';
 
 const HomePage: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage: React.FC = () => {
       <AboutUs />
       <ServicesSection />
       <WhyChooseUs/>
+      <TestimonialsSection />
       <CTASection />
     </div>
   );
