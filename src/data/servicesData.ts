@@ -1,3 +1,4 @@
+import { image } from "framer-motion/client";
 
 export const servicesData = {
   'business-setup': {
@@ -100,7 +101,7 @@ export const servicesData = {
         image: '/images/services/family-visa/residence-renewal.jpg'
       },
       {
-        text: 'Income certificate attestation',
+        text: 'Salary certificate attestation',
         image: '/images/services/family-visa/income-certificate.jpg'
       },
       {
@@ -166,7 +167,7 @@ export const servicesData = {
         image: '/images/services/amer-tasheel/visa-stamping.jpg'
       },
       {
-        text: 'Emirates ID collection and renewal',
+        text: 'Emirates ID Typing and renewal',
         image: '/images/services/amer-tasheel/eid-collection.jpg'
       },
       {
@@ -387,6 +388,18 @@ export const servicesData = {
     {
       text: 'Coverage upgrades and plan customization',
       image: '/images/services/insurance/coverage-upgrade.jpg'
+    },
+    {
+      text: 'Vehicle insurance services',
+      image: '/images/services/insurance/vehicle-insurance.jpg'
+    },
+    {
+      text: 'Health insurance services',
+      image: '/images/services/insurance/health-insurance.jpg'
+    },
+    {
+      text: 'Workmen Compensation',
+      image:'/images/services'
     }
   ]
 },
