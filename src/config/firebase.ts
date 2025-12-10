@@ -51,20 +51,14 @@ let analytics: Analytics | null = null;
 
 if (validateFirebaseConfig(firebaseConfig)) {
   try {
-    // Initialize Firebase App
     app = initializeApp(firebaseConfig);
     console.log(' Firebase initialized successfully');
-
-    // Initialize Firestore
     firestoreDb = getFirestore(app);
     
-    // Connect to Firestore emulator in development (optional)
     if (import.meta.env.DEV && import.meta.env.VITE_USE_FIREBASE_EMULATOR === 'true') {
       connectFirestoreEmulator(firestoreDb, 'localhost', 8080);
       console.log(' Connected to Firestore emulator');
     }
-
-    // Initialize Analytics (only in production and if supported)
     if (typeof window !== 'undefined' && import.meta.env.PROD) {
       isSupported().then((supported) => {
         if (supported && app) {
@@ -82,13 +76,12 @@ if (validateFirebaseConfig(firebaseConfig)) {
   console.warn(' Firebase not initialized due to missing configuration');
 }
 
-// Export the Firestore instance
+
 export const db: Firestore | null = firestoreDb;
 
-// Export Firebase app and analytics
 export { app as firebaseApp, analytics };
 
-// Helper function to get Firestore instance with error handling
+
 export const getFirestoreInstance = (): Firestore => {
   if (!firestoreDb) {
     throw new Error('Firestore is not initialized. Check your Firebase configuration.');
@@ -96,7 +89,7 @@ export const getFirestoreInstance = (): Firestore => {
   return firestoreDb;
 };
 
-// Helper to check if Firebase is ready
+
 export const isFirebaseReady = (): boolean => {
   return app !== null && firestoreDb !== null;
 };

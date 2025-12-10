@@ -41,7 +41,7 @@ export const servicesData = {
   },
   'visa-services': {
     title: 'Visa Services',
-    heroImage: '/images/hero/2.png',
+    heroImage: '/images/hero/visa.png',
     description: 'Complete visa processing services for employment and domestic workers. Fast, efficient, and hassle-free visa solutions.',
     features: [
       {
@@ -236,7 +236,7 @@ export const servicesData = {
   },
   'translation': {
     title: 'Translation Services',
-    heroImage: '/images/hero/2.png',
+    heroImage: '/images/hero/translation.png',
     description: 'Certified translation services for all your documentation needs. Professional translators for accurate and reliable translations.',
     features: [
       {
@@ -443,7 +443,7 @@ export const servicesData = {
   },
   'tourist-visa': {
   title: 'Tourist Visa Services',
-  heroImage: '/images/hero/2.png',
+  heroImage: '/images/hero/tour.png',
   description: 'Comprehensive tourist visa processing services for American, Schengen, European, US, and Australian destinations. Expert assistance for all your international travel visa requirements.',
   features: [
     {
@@ -482,7 +482,7 @@ export const servicesData = {
 },
 'pro-services': {
   title: 'PRO Services',
-  heroImage: '/images/hero/pro-services.png',
+  heroImage: '/images/hero/2.png',
   description: 'Complete PRO (Public Relations Officer) services for all your government documentation and business setup needs in the UAE. Professional assistance for hassle-free processing.',
   features: [
     {
@@ -537,7 +537,7 @@ export const servicesData = {
 },
 'document-clearance': {
   title: 'Document Clearance',
-  heroImage: '/images/hero/document-clearance.png',
+  heroImage: '/images/hero/docu.png',
   description: 'Reliable document clearance and verification services for individuals and businesses, ensuring transparent and compliant government processing.',
   features: [
     {

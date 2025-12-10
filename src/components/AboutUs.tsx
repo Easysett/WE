@@ -40,7 +40,7 @@ const AboutUsMinimal = () => {
             </div>
 
             {/* Right Column - Key Points */}
-            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
+            <div className="bg-white to-white rounded-2xl p-8 border border-[#F5F5F5]">
               <h3 className="text-xl font-semibold text-gray-900 mb-6">
                 What Sets Us Apart
               </h3>

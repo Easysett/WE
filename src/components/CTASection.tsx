@@ -4,6 +4,7 @@ import { ArrowRight, Phone, CheckCircle2 } from 'lucide-react';
 
 interface CTASectionProps {
   title?: string;
+  subtitle?: string;
   description?: string;
   primaryButtonText?: string;
   primaryButtonLink?: string;

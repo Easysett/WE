@@ -23,7 +23,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 'visa-services',
       title: 'Visa Services',
-      image: '/images/hero/2.png',
+      image: '/images/hero/visa.png',
       description: 'Complete visa processing services for employment and domestic workers.',
       features: ['Employment Visa', 'Visa Renewal', 'Status Change', 'Medical Testing']
     },
@@ -58,7 +58,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 'translation',
       title: 'Translation Services',
-      image: '/images/hero/2.png',
+      image: '/images/hero/translation.png',
       description: 'Certified translation services for all your documentation needs.',
       features: ['Arabic to English', 'English to Arabic', 'Legal Translation', 'Certified Translations']
     },
@@ -93,7 +93,7 @@ const ServicesSection: React.FC = () => {
     {
       id: 'document-clearance',
       title: 'Document Clearance',
-      image: '/images/hero/2.png',
+      image: '/images/hero/docu.png',
       description: 'Professional document clearance and processing services.',
       features: ['MOFA Attestation', 'Immigration Clearance', 'Customs Clearance', 'Legalization']
     }

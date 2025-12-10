@@ -16,6 +16,7 @@ import Sitemap from './pages/Sitemap';
 import PrivacyPolicyPage from './pages/Privacy';
 import TermsConditionsPage from './pages/Terms';
 import ScrollToTop from './components/ScrollToTop';
+import TawkTo from './components/TawkTo';
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -57,6 +58,7 @@ const App: React.FC = () => {
         </Routes>
       </main>
       <Footer />
+      <TawkTo />
     </div>
   );
 };

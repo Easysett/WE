@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import CTASection from '../components/CTASection';
-import { CheckCircle2} from 'lucide-react';
 import WhyChooseUs from '../components/WhyChooseUs';
 
 interface Feature {
@@ -15,7 +14,6 @@ interface ServicePageProps {
   description: string;
   features: Feature[];
 }
-
 
 const ServicePage: React.FC<ServicePageProps> = ({ title, heroImage, description, features }) => {
   const containerVariants: Variants = {
@@ -37,7 +35,6 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, heroImage, description
       transition: { type: 'spring', stiffness: 300, damping: 25 },
     },
   };
-
 
   return (
     <div className="min-h-screen bg-white">
@@ -118,15 +115,15 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, heroImage, description
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                whileHover={{ y: -8 }}
-                className="group rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="group rounded-3xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-200"
               >
-                {/* Image Container */}
-                <div className="h-48 overflow-hidden relative bg-gray-100">
+                {/* Image Container with rounded top */}
+                <div className="h-56 overflow-hidden relative bg-gradient-to-br from-gray-50 to-gray-100">
                   <img
                     src={feature.image}
                     alt={feature.text}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
@@ -136,24 +133,22 @@ const ServicePage: React.FC<ServicePageProps> = ({ title, heroImage, description
                     }}
                   />
                   
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
-                  {/* Checkmark Badge */}
-                  <div className="absolute top-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <CheckCircle2 size={24} className="text-green-500" />
-                  </div>
+                  {/* Subtle gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                 </div>
                 
-                {/* Content */}
-                <div className="p-5">
-                  <p className="text-gray-700 font-medium leading-relaxed text-sm">
+                {/* Content - News article style */}
+                <div className="p-6 bg-gradient-to-b from-white to-gray-50">
+                  
+                  {/* Main text - headline style */}
+                  <h3 className="text-gray-900 font-bold leading-snug text-base line-clamp-3 group-hover:text-[#BC9753] transition-colors duration-300">
                     {feature.text}
-                  </p>
+                  </h3>
                 </div>
               </motion.div>
             ))}
           </motion.div>
+
           <WhyChooseUs />
         </div>
       </div>
