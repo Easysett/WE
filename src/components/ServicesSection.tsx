@@ -174,7 +174,7 @@ const ServicesSection: React.FC = () => {
             >
               <Link to={`/services/${service.id}`} className="h-full block">
                 {/* Card Background */}
-                <div className="h-full rounded-2xl border border-gray-200/60 bg-white shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col">
+                <div className="h-full rounded-xl border border-gray-200/60 bg-white shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col">
                   
                   {/* Image Header Section - Optimized for 400x200px images */}
                   <div className="relative h-40 overflow-hidden bg-gradient-to-br from-gray-50 to-white">

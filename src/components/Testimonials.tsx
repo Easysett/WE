@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { feedbacks } from '../data/feedbacks';
 
@@ -110,10 +110,13 @@ const TestimonialsSection = () => {
                 {visibleFeedbacks.map((feedback) => (
                   <div
                     key={feedback.id}
-                    className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 relative"
                   >
+                    {/* Quote Icon */}
+                    <Quote className="w-12 h-12 text-gray-300 absolute top-2 right-6" />
+                    
                     {/* Testimonial Text */}
-                    <p className="text-gray-700 leading-relaxed mb-6 text-justify min-h-[180px] flex items-center justify-center">
+                    <p className="text-gray-700 leading-relaxed mb-6 text-justify min-h-[180px] flex items-center justify-center relative z-10">
                       {feedback.text}
                     </p>
 
