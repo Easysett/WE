@@ -15,11 +15,11 @@ const StatsCounter: React.FC = () => {
 
     hasAnimatedRef.current = true;
 
-    // Animate 5000+
+    // Animate 400+
     const animateClients = () => {
       let start = 0;
-      const end = 5000;
-      const duration = 10000;
+      const end = 400;
+      const duration = 1000;
       const increment = end / (duration / 16);
       
       const counter = () => {
@@ -34,10 +34,10 @@ const StatsCounter: React.FC = () => {
       requestAnimationFrame(counter);
     };
 
-    // Animate 10000+
+    // Animate 2000+
     const animateVisas = () => {
       let start = 0;
-      const end = 1000;
+      const end = 2000;
       const duration = 2500;
       const increment = end / (duration / 16);
       
